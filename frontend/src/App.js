@@ -21,7 +21,7 @@ export const App = () => {
     }else if (isLoggedIn === false) {
       navigate("/signup");
     }
-  }, [])
+  })
   
   return (
     <div className="bg-blue-900 text-white h-screen p-2 relative">

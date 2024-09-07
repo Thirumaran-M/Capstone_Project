@@ -57,7 +57,7 @@ const Sidebar = () => {
                 setData(response.data.data);
         }
         fetch();
-    }, []);
+    });
     return (
         <>
             {Data && (
