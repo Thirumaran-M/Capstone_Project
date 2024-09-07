@@ -6,6 +6,7 @@ import axios from "axios";
 const Signup = () => {
     const history = useNavigate();
     const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+    
     if (isLoggedIn === true) {
         history("/");
     }
