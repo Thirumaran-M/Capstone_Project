@@ -39,7 +39,7 @@ const Cards = ({ home, SetInputDiv, data, setUpdatedData }) => {
     };
     const handleCompTask = async (id) => {
         try {
-            const response = await axios.put(`https://maran-task-management.onrender.com/api/v2/update-complete-task/${id}`, {}, { headers });
+            await axios.put(`https://maran-task-management.onrender.com/api/v2/update-complete-task/${id}`, {}, { headers });
             //alert(response.data.message);
         } catch (error) {
             console.log(error);
@@ -48,7 +48,7 @@ const Cards = ({ home, SetInputDiv, data, setUpdatedData }) => {
 
     const handleImpoTask = async (id) => {
         try {
-            const response = await axios.put(`https://maran-task-management.onrender.com/api/v2/update-imp-task/${id}`, {}, { headers });
+           await axios.put(`https://maran-task-management.onrender.com/api/v2/update-imp-task/${id}`, {}, { headers });
             //alert(response.data.message);
         } catch (error) {
             console.log(error);
