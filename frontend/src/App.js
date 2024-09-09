@@ -10,7 +10,8 @@ import Login from './pages/Login';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from './store/auth';
 
-
+//http://localhost:1000
+//https://maran-task-management.onrender.com
 export const App = () => {
   const navigate = useNavigate();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);

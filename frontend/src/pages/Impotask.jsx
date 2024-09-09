@@ -11,7 +11,7 @@ const Impotask = () => {
 
   useEffect(() => {
     const fetch = async () => {
-      const response = await axios.get("http://localhost:1000/api/v2/get-imp-tasks", { headers });
+      const response = await axios.get("https://maran-task-management.onrender.com/api/v2/get-imp-tasks", { headers });
       //console.log(response)
       setData(response.data.data);
     }

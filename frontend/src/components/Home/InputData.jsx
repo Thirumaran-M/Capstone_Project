@@ -21,7 +21,7 @@ const InputData = ({ InputDiv, SetInputDiv, UpdatedData, setUpdatedData }) => {
         if (Data.title === "" || Data.desc === "") {
             alert("All Fields are Required!");
         } else {
-            await axios.post("http://localhost:1000/api/v2/create-task", Data, { headers });
+            await axios.post("https://maran-task-management.onrender.com/api/v2/create-task", Data, { headers });
             setData({ title: "", desc: "" });
             SetInputDiv("hidden");
         }
@@ -31,7 +31,7 @@ const InputData = ({ InputDiv, SetInputDiv, UpdatedData, setUpdatedData }) => {
         if (Data.title === "" || Data.desc === "") {
             alert("All Fields are Required!");
         } else {
-            const response = await axios.put(`http://localhost:1000/api/v2/update-task/${UpdatedData.id}`, Data, { headers });
+            const response = await axios.put(`https://maran-task-management.onrender.com/api/v2/update-task/${UpdatedData.id}`, Data, { headers });
             console.log(response);
             setUpdatedData({ id: "", title: "", desc: "" });
             setData({ title: "", desc: "" });

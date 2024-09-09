@@ -19,7 +19,7 @@ const Signup = () => {
             if (Data.username === "" || Data.email === "" || Data.password === "") {
                 alert("All Fields are Required!");
             } else {
-                const response = await axios.post("http://localhost:1000/api/v1/sign-in", Data);
+                const response = await axios.post("https://maran-task-management.onrender.com/api/v1/sign-in", Data);
                 //console.log(response);
                 setData({ username: "", email: "", password: "" });
                 alert(response.data.message);
