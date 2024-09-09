@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from './store/auth';
 
+
 export const App = () => {
   const navigate = useNavigate();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -21,7 +22,7 @@ export const App = () => {
     }else if (isLoggedIn === false) {
       navigate("/signup");
     }
-  })
+  }, [])
   
   return (
     <div className="bg-blue-900 text-white h-screen p-2 relative">

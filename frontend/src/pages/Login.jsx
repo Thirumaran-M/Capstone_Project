@@ -22,7 +22,7 @@ const Login = () => {
                 alert("All Fields are Required!");
             } else {
                 console.log(Data);
-                const response = await axios.post("https://maran-task-management.onrender.com/api/v1/log-in", Data);
+                const response = await axios.post("http://localhost:1000/api/v1/log-in", Data);
                 console.log(response);
                 setData({ username: "", password: "" });
                 //alert(response.data.message);

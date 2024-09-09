@@ -6,7 +6,7 @@ import { MdDelete } from "react-icons/md";
 import { IoAddCircleSharp } from "react-icons/io5";
 import axios from 'axios';
 
-//http://localhost:1100
+//const [ImportantButton, SetImportantButton] = useState("InComplete");
 const Cards = ({ home, SetInputDiv, data, setUpdatedData }) => {
 
     // console.log("****", data);
@@ -39,7 +39,7 @@ const Cards = ({ home, SetInputDiv, data, setUpdatedData }) => {
     };
     const handleCompTask = async (id) => {
         try {
-            await axios.put(`https://maran-task-management.onrender.com/api/v2/update-complete-task/${id}`, {}, { headers });
+            const response = await axios.put(`http://localhost:1000/api/v2/update-complete-task/${id}`, {}, { headers });
             //alert(response.data.message);
         } catch (error) {
             console.log(error);
@@ -48,7 +48,7 @@ const Cards = ({ home, SetInputDiv, data, setUpdatedData }) => {
 
     const handleImpoTask = async (id) => {
         try {
-           await axios.put(`https://maran-task-management.onrender.com/api/v2/update-imp-task/${id}`, {}, { headers });
+            const response = await axios.put(`http://localhost:1000/api/v2/update-imp-task/${id}`, {}, { headers });
             //alert(response.data.message);
         } catch (error) {
             console.log(error);
@@ -62,7 +62,7 @@ const Cards = ({ home, SetInputDiv, data, setUpdatedData }) => {
 
     const deleteTask = async (id) => {
         try {
-            const response = await axios.delete(`https://maran-task-management.onrender.com/api/v2/delete-task/${id}`, { headers });
+            const response = await axios.delete(`http://localhost:1000/api/v2/delete-task/${id}`, { headers });
             alert(response.data.message);
         } catch (error) {
             console.log(error);
